@@ -53,6 +53,18 @@ button:hover{
 .des{
     color: black;
 }
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 100%;
+    background-color: red;
+    margin-top: 2rem;
+}
+h3{
+    color: white;
+}
 @media screen and (max-width:600px){
     .header{
         display: flex;

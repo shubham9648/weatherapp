@@ -40,6 +40,9 @@ const Data = ({text}) =>{
         </div> 
       
     </section>
+    <footer>
+        <h3>Developed and created by Shubham Tiwari</h3>
+    </footer>
         </>
     )
 }

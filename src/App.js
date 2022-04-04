@@ -18,9 +18,10 @@ function App() {
     sunrise:0,
     sunset:0
    })
-  const handleClick = () =>{
- axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8b71704e3be0cf8d20142fd546b9db86`)
-  .then((res)=>{
+ async function handleClick (){
+ let res =await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8b71704e3be0cf8d20142fd546b9db86`)
+
+    // console.log(finalData.data)
     setData({
     description:res.data.weather[0],
     country:res.data.sys.country,
@@ -33,15 +34,15 @@ function App() {
     sunrise:res.data.sys.sunrise,
     sunset:res.data.sys.sunset
     })
-  })
+  
  }
    //  const finalData = await res.json()
   //  console.log(finalData) 
     
+    // const handleClick = () =>{
+
+    // }
     
-    React.useEffect(()=>{
-      // getData()
-    },[])
   return (
     <>
     <div className='header'>
@@ -52,9 +53,18 @@ function App() {
       }}/>
       <button type='submit' onClick={handleClick}>get Tempreture</button>
       </div>
-      <Data text={data} />
-        
-      
+      <Data  
+      description={data.description}
+    country={data.country}
+    temp={data.temp}
+    pressure={data.pressure}
+     humidity={data.humidity}
+    feels_like={data.feels_like}
+    temp_max={data.temp_max}
+     temp_min={data.temp_min}
+    sunrise={data.sunrise}
+     sunset={data.sunset}
+      />
     </>
   );
 }

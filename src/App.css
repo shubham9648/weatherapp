@@ -41,11 +41,11 @@ button{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: gray;
+    background-color: white;
     
 }
 .child-container:hover{
-    box-shadow: 0 0 1rem #fff;
+    box-shadow: 0 0 1rem rgb(249, 3, 3);
 }
 button:hover{
     box-shadow:0 0 1rem rgb(34, 180, 88) ;
@@ -72,9 +72,11 @@ h3{
         /* width: 90%; */
         align-items: center;
         justify-content: center;
+        
     }
     .main-heading{
     font-size: 1.5rem;
+    padding: 1rem;
     }
     input{
         font-size: 1.2rem;
